@@ -19,3 +19,4 @@ manifest:
     - name: zephyr-rust
       remote: tylerwhall
       revision: master
+      submodules: true
