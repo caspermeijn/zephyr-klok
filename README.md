@@ -1,3 +1,10 @@
+# Klok (zephyr)
+A smartwatch firmware with a focus on showing time.
+
+This is a clone of the original [Klok](https://gitlab.com/caspermeijn/klok), but this time based om Zephyr.
+
+# The following is the original readme content of the template
+
 # Zephyr Example Application
 
 This repository contains a Zephyr example application. The main purpose of this

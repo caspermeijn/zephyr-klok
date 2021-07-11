@@ -3,14 +3,19 @@
 
 manifest:
   self:
-    path: example-application
+    path: klok
 
   remotes:
     - name: zephyrproject-rtos
       url-base: https://github.com/zephyrproject-rtos
+    - name: tylerwhall
+      url-base: https://github.com/tylerwhall
 
   projects:
     - name: zephyr
       remote: zephyrproject-rtos
-      revision: main
+      revision: v2.5.0
       import: true
+    - name: zephyr-rust
+      remote: tylerwhall
+      revision: master

@@ -10,10 +10,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          path: example-application
+          path: klok
 
       - name: Initialize
-        working-directory: example-application
+        working-directory: klok
         run: |
           pip3 install -U west
           west init -l .
@@ -21,12 +21,12 @@ jobs:
           pip3 install -r ../zephyr/scripts/requirements-base.txt
 
       - name: Build firmware
-        working-directory: example-application
+        working-directory: klok
         run: |
-          west build -b custom_plank -s app
+          west build -b pinetime_devkit0 -s app
 
       - name: Archive firmware
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: example-application/build/zephyr/zephyr.*
+          path: klok/build/zephyr/zephyr.*
